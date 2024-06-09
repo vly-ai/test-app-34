@@ -1,42 +1,57 @@
-Following the instructions, I will create the `pages/index.js` file with basic Next.js page structure, ensuring to include detailed documentary comments at the top of the file.
+Sure, I'll initialize a simple Next.js project by creating the `pages/index.js` file. This file will serve as the main entry point for our task list application. Here is the detailed documentation followed by the code for the `index.js` file:
 
 ```javascript
 /**
- * File: pages/index.js
- * Purpose: This file serves as the entry point for the main page of our task list web application.
+ * @file index.js
+ * @description This file is the main entry point for the Next.js application. It renders the homepage, 
+ *              which will serve as the task list application.
  * 
- * Description: This file utilizes Next.js to create a simple, scalable, and reliable 
- * web application. This basic setup will later be extended to include the functionality 
- * of a task list.
- *
- * Functions:
- * - Home: Functional component that returns the JSX elements to be rendered on the main page.
- *
- * Usage:
- * This is the default page that will be served when the user navigates to the root URL of the application.
+ * @module pages/index
  * 
- * Returns:
- * - JSX.Element: The HTML structure of the main page to be rendered in the browser.
+ * @exports Home
+ * 
+ * @requires react
+ * 
+ * @functions
+ * @function Home - Renders the main homepage for the task list application.
+ * 
+ * @returns {JSX.Element} - A React element that represents the main homepage.
+ * 
+ * @example
+ * import Home from './index';
+ * 
+ * const App = () => (
+ *   <div>
+ *     <Home />
+ *   </div>
+ * );
+ * 
+ * export default App;
  */
 
-import Head from 'next/head';
+// Importing necessary modules
+import React from 'react';
 
-export default function Home() {
+/**
+ * Home component
+ * 
+ * @function Home
+ * @returns {JSX.Element} - A React element that represents the main homepage.
+ */
+const Home = () => {
   return (
     <div>
-      <Head>
-        <title>Task List Application</title>
-        <meta name="description" content="A simple task list application built with Next.js" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main>
-        <h1>Welcome to the Task List Application</h1>
-        <p>This is the main page.</p>
-      </main>
+      <h1>Welcome to Your Task List</h1>
+      <ul>
+        <li>Task 1</li>
+        <li>Task 2</li>
+        <li>Task 3</li>
+      </ul>
     </div>
   );
-}
+};
+
+export default Home;
 ```
 
-This skeleton provides the basic Next.js page structure required to get started and can be extended to include further functionality for the task list application later. The detailed documentary comments describe the file's purpose, functions, and other important aspects.
+This code initializes a simple Next.js application with the main entry page displaying a header and a sample task list. You can further modify and extend this file as needed to develop your task list application.
